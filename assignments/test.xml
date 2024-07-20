@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionaries>
+<dictionary language="English">
+    <author>Olivia</author>
+    <words>
+        <word ID = "1">Cat</word>
+        <word ID = "2">Dog</word>
+        <word ID = "3">Hello</word>
+        <word ID = "4">Goodbye</word>
+        <word ID = "5">Red</word>
+        <word ID = "6">Blue</word>
+        <word ID = "7">House</word>
+        <word ID = "2">Mug</word>
+        <word ID = "2">Mountain</word>
+        <word ID = "2">Think</word>
+    </words>
+</dictionary>
+
+<dictionary language="Swedish">
+<author>Olivia</author>
+<words>
+    <word ID = "1">katt</word>
+    <word ID = "2">Hund</word>
+    <word ID = "3">Hej</word>
+    <word ID = "4">Hejdå</word>
+    <word ID = "5">Röd</word>
+    <word ID = "6">Blå</word>
+    <word ID = "7">Hus</word>
+    <word ID = "2">Mugg</word>
+    <word ID = "2">Berg</word>
+    <word ID = "2">Tänka</word>
+</words>
+</dictionary>
+
+mc
+
+</dictionaries>
+

@@ -1,0 +1,14 @@
+<!-- Filnamn: dtdSchema.dtd -->
+<!-- Författare: Olivia Fabreschi -->
+<!-- Datum: 24 Mars 2024 -->
+
+<!ELEMENT ordbok (title, author, words)>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT author (#PCDATA)>
+        <!ELEMENT words (word+)>
+        <!ELEMENT word (#PCDATA)>
+        <!-- attributerna -->
+        <!ATTLIST ordbok language (Swedish|French|English)>
+        <!ATTLIST word ID CDATA #REQUIRED>
+
+

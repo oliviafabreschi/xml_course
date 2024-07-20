@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filnamn: hundklubben.xml -->
+<!-- Författare: Olivia Fabreschi -->
+
+<Hundklubben>
+    <!-- hund -->
+    <Hund>
+        <ras>Schäfer</ras>
+        <kon>Tik</kon>
+        <agare>
+            <fornamn>Tommy</fornamn>
+            <efternamn>Nilsson</efternamn>
+        </agare>
+    </Hund>
+    <Hund>
+        <ras>.</ras>
+        <kon>.</kon>
+        <agare>
+            <fornamn>.</fornamn>
+            <efternamn>.</efternamn>
+        </agare>
+    </Hund>
+</Hundklubben>

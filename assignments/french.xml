@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filnamn: french.xml -->
+<!-- Författare: Olivia Fabreschi -->
+<!-- Datum: 23 Mars 2024 -->
+<?xml-stylesheet type="text/css" href="stylesheet.css" ?>
+<!DOCTYPE dictionary SYSTEM "/Users/oliviafabreschi/IdeaProjects/xml_course/assignments/dtdSchema.dtd" >
+<dictionary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemaxml.xsd" language="French">
+    <!-- fransk ordbok -->
+    <title>French Dictionary</title>
+    <author>Olivia</author>
+    <words>
+        <!-- numrerar orden för att lättare kunna matcha de till de olika språken-->
+        <word ID = "1">Chat</word>
+        <word ID = "2">Chien</word>
+        <word ID = "3">Salut</word>
+        <word ID = "4">Aurevoir</word>
+        <word ID = "5">Rouge</word>
+        <word ID = "6">Bleu</word>
+        <word ID = "7">Maison</word>
+        <word ID = "8">Tasse</word>
+        <word ID = "9">Montagne</word>
+        <word ID = "10">Penser</word>
+    </words>
+</dictionary>

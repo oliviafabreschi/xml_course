@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filnamn: anonym.xsd -->
+<!-- Författare: Olivia Fabreschi -->
+<!-- Datum: 31 maj 2024 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="personal">
+        <xs:complexType>
+            <!-- Specifierar att det måste vara  ID nr -->
+            <xs:attribute name="language">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Swedish"/>
+                        <xs:enumeration value="French"/>
+                        <xs:enumeration value="English"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <!-- sker i denna orgning -->
+            <xs:sequence>
+                <!-- max 100 anställda -->
+                <xs:element name="anstalld" minOccurs="0" maxOccurs="100">
+                    <xs:complexType>
+                        <!-- ID behöver finnas med, 5 tecken -->
+                        <xs:attribute name="ID" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="\d{5}"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:sequence>
+                            <xs:element name="namn">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <!-- Text-delen av varje namn -->
+                                        <xs:element name="fornamn" type="xs:string"/>
+                                        <xs:element name="efternamn" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <!-- elementmed Text-delar -->
+                        <xs:element name="avdelning" type="xs:string"/>
+                        <xs:element name="befattning" type="xs:string"/>
+                        <xs:element name="lon" >
+                            <xs:complexType>
+                                <xs:simpleContent>
+                                    <!-- Text-delen av varje word -->
+                                    <xs:extension base="xs:string">
+                                        <!-- specifierar enhet, behlöver vara antingen kr eller sek  -->
+                                        <xs:attribute name="enhet">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="sek"/>
+                                                    <xs:enumeration value="kr"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:attribute>
+                                    </xs:extension>
+                                </xs:simpleContent>
+                            </xs:complexType>
+                        </xs:element>
+                        <!-- Leasingbil ska kunna anta värdet Audi, BMW eller Volvo. -->
+                      <xs:element name="leasingbil" type="xs:string"/>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="Audi"/>
+                                <xs:enumeration value="BMW"/>
+                                <xs:enumeration value="Volvo"/>
+                            </xs:restriction>
+                  </xs:complexType>
+              </xs:element>
+          </xs:sequence>
+      </xs:complexType>
+  </xs:element>
+</xs:schema>

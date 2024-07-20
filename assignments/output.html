@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSL Transformation</title>
+    <script>
+        function applyTransformation() {
+            var xmlPath = "/students.xml";
+            var xslPath = "/students.xsl";
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var xmlDoc = this.responseXML;
+                    var xslDoc = new XMLHttpRequest();
+                    xslDoc.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            var xsl = this.responseXML;
+                            var xsltProcessor = new XSLTProcessor();
+                            xsltProcessor.importStylesheet(xsl);
+                            var resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
+                            document.getElementById("result").appendChild(resultDocument);
+                        }
+                    };
+                    xslDoc.open("GET", xslPath, true);
+                    xslDoc.send();
+                }
+            };
+            xhttp.open("GET", xmlPath, true);
+            xhttp.send();
+        }
+    </script>
+</head>
+<body onload="applyTransformation()">
+<div id="result"></div>
+</body>
+</html>

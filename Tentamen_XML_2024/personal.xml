@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filnamn: personal.xml -->
+<!-- Författare: var med i tentamen -->
+
+<!-- kopplar DTDfilen-->
+<!-- <!DOCTYPE personal SYSTEM "personalDTD.dtd">-->
+
+<!-- kopplar xsd-schemat-->
+<personal xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="global.xsd">
+    <anstalld ID="12345">
+        <namn>
+            <fornamn>Sten</fornamn>
+            <efternamn>Stensson</efternamn>
+        </namn>
+        <avdelning>Ekonomi</avdelning>
+        <befattning>Chef</befattning>
+        <lon enhet="kr">3000</lon>
+        <leasingbil>BMW</leasingbil>
+
+    </anstalld>
+
+    <anstalld ID="1234">
+        <namn>
+            <fornamn>.</fornamn>
+            <efternamn>.</efternamn>
+        </namn>
+        <avdelning>.</avdelning>
+        <befattning>.</befattning>
+        <lon enhet="kr">.</lon>
+        <leasingbil>.</leasingbil>
+    </anstalld>
+
+
+
+</personal>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filnamn: global.xsd -->
+<!-- Författare: Olivia Fabreschi -->
+<!-- Datum: 31 maj 2024 -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- en global xsd har bättre sorterad kod som är mindreindragen -->
+
+    <!-- definiera personal -->
+    <xs:element name="personal">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="anstalld" type="anstalldTyp" maxOccurs="100"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- definiera anställd -->
+    <xs:complexType name="anstalldTyp">
+        <xs:sequence>
+            <xs:attribute name="ID" type="idTyp"/>
+            <xs:element name="namn" type="namnTyp"/>
+            <xs:element name="avdelning" type="xs:string"/>
+            <xs:element name="befattning" type="xs:string"/>
+            <xs:attribute name="enhet" type="enhetTyp"/>
+            <xs:element name="lon" type="lonTyp"/>
+            <xs:element name="leasingbil" type="leasingbilTyp"/>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- definiera namn -->
+    <xs:complexType name="namnTyp">
+        <xs:sequence>
+            <xs:attribute name="ID" type="xs:string"/>
+            <xs:element name="fornamn" type="xs:string"/>
+            <xs:element name="efternamn" type="xs:string"/>
+    </xs:complexType>
+
+    <!-- definiera lon -->
+    <xs:complexType name="lonTyp">
+        <xs:sequence>
+        <xs:attribute name="enhet" type="xs:string"/>
+    </xs:complexType>
+
+    <!-- definiera leasingbil -->
+    <xs:complexType name="leasingbilTyp">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Audi"/>
+            <xs:enumeration value="BMW"/>
+            <xs:enumeration value="Volvo"/>
+        </xs:restriction>
+    </xs:complexType>
+
+
+    <!-- specifierar enhet, behlöver vara antingen kr eller sek  -->
+    <xs:complexType name="enhetTyp">
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="sek"/>
+                    <xs:enumeration value="kr"/>
+                </xs:restriction>
+    </xs:complexType>
+
+
+    <!-- ID behöver finnas med, 5 tecken -->
+    <xs:complexType name="idTyp">
+    <xs:attribute name="ID" use="required">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="\d{5}"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+</xs:schema>

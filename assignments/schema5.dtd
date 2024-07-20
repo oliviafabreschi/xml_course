@@ -1,0 +1,13 @@
+<!-- Filnamn: schema5.dtd -->
+<!-- Författare: Olivia Fabreschi -->
+<!-- Datum: 1 April 2024 -->
+
+<!ELEMENT lexikon (dictionary*)>
+<!ELEMENT dictionary (path)>
+<!ELEMENT path (#PCDATA)>
+<!ENTITY link-swedish SYSTEM "swedish.xml">
+<!ENTITY link-english SYSTEM "english.xml">
+
+
+
+

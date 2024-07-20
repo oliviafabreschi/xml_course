@@ -1,0 +1,48 @@
+/* Filnamn: uppg4stylesheet.css.xml  */
+/* Författare: Olivia Fabreschi */
+/* Datum: 25 Mars 2024 - */
+
+
+
+h1 {
+display: block;
+/*centrerad*/
+text-align: center;
+/*#small-caps1*/
+font-variant: small-caps;
+/*#16 pt stor*/
+ font-size: 24px;
+  /*röd för variation*/
+color: red;
+}
+
+object {
+display: block;
+/*centrerad*/
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+/*#small-caps1*/
+}
+
+h2 {
+display: block;
+/*centrerad*/
+text-align: center;
+/*#small-caps1*/
+font-variant: small-caps;
+/*#16 pt stor*/
+font-size: 16px;
+  /*1.5cm mellan titel, 2.5cm mellan ordlistan*/
+margin-top: 1.5cm;
+margin-bottom: 2.5cm;
+}
+
+p {
+/*normal serif*/
+  font-family: serif;
+/*vänsterjustrearad*/
+text-align: left;
+/*#12 pt stor*/
+  font-size: 12px;
+}

@@ -1,0 +1,24 @@
+<!-- Filnamn: personalDTD.dtd -->
+<!-- Författare: Olivia Fabreschi -->
+<!-- Datum: 31 maj 2024 -->
+
+<!-- elementerna -->
+
+<!-- + då det kanfinnas en eller flera -->
+<!ELEMENT personal (anstalld+)>
+<!-- * då det inte behöver finnas med-->
+<!ELEMENT anstalld (namn, avdelning,befattning, lon, leasingbil+)>
+
+<!ELEMENT namn (fornamn, efternamn)>
+<!ELEMENT fornamn (#PCDATA)>
+<!ELEMENT efternamn (#PCDATA)>
+<!ELEMENT avdelning (#PCDATA)>
+<!ELEMENT befattning (#PCDATA)>
+<!ELEMENT lon (#PCDATA)>
+<!ELEMENT leasingbil (#PCDATA)>
+
+<!-- attributerna -->
+<!ATTLIST lon enhet (kr|eur|usd)>
+<!ATTLIST anstalld ID CDATA #REQUIRED>
+
+

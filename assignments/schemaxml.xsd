@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!-- Filnamn: schemaxml.xsd -->
+<!-- Författare: Olivia Fabreschi -->
+<!-- Datum: 23 Mars 2024 -->
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="dictionary">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" type="xs:string"/>
+                <xs:element name="author" type="xs:string"/>
+                <xs:element name="words">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="word" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <!-- Text-delen av varje word -->
+                                        <xs:extension base="xs:string">
+                                            <!-- specifierar nr för varje word för att senare lättare kunna översätta orden  -->
+                                            <xs:attribute name="ID" type="xs:positiveInteger" use="required"/>
+                                        </xs:extension>
+                                     </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <!-- Specifierar att det måste vara mellan dessa språk -->
+            <xs:attribute name="language">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Swedish"/>
+                        <xs:enumeration value="French"/>
+                        <xs:enumeration value="English"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

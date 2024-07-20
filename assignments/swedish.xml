@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="stylesheetxsl.xsl"?>
+<!-- Filnamn: swedish.xml -->
+<!-- Författare: Olivia Fabreschi -->
+<!-- Datum: 23 Mars 2024 -->
+
+<!-- CSS stylesheet-->
+<!-- <?xml-stylesheet type="text/css" href="stylesheet.css" ?> -->
+<!-- DTD schema-->
+<!--<!DOCTYPE dictionary SYSTEM "dtdSchema.dtd" >-->
+<dictionary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemaxml.xsd" language="Swedish">
+    <!-- svensk ordbok -->
+    <title>Swedish Dictionary</title>
+    <author>Olivia</author>
+    <words>
+        <!-- numrerar orden för att lättare kunna matcha de till de olika språken-->
+        <word ID = "1">Katt</word>
+        <word ID = "2">Hund</word>
+        <word ID = "3">Hej</word>
+        <word ID = "4">Hejdå</word>
+        <word ID = "5">Röd</word>
+        <word ID = "6">Blå</word>
+        <word ID = "7">Hus</word>
+        <word ID = "8">Mugg</word>
+        <word ID = "9">Berg</word>
+        <word ID = "10">Tänka</word>
+    </words>
+</dictionary>

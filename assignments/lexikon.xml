@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Filnamn: lexikon.xml -->
+<!-- Författare: Olivia Fabreschi -->
+<!-- Datum: 23 Mars 2024 -->
+
+
+<!-- DTD-fil -->
+<!DOCTYPE lexikon SYSTEM "/Users/oliviafabreschi/IdeaProjects/xml_course/assignments/schema5.dtd">
+
+<!-- xsl stylesheet -->
+<?xml-stylesheet type="text/xsl" href="stylesheet.xsl"?>
+
+<lexikon>
+    <dictionary>
+        <path>&link-english;</path>
+    </dictionary>
+    <dictionary>
+        <path>&link-swedish;</path>
+    </dictionary>
+</lexikon>
